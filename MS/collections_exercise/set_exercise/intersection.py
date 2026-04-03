@@ -1,5 +1,0 @@
-m = int(input())
-english = set(input().split())
-n = int(input())
-french = set(input().split())
-print(len(english.intersection(french)))

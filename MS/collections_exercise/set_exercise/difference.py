@@ -1,5 +1,0 @@
-m = input()
-english = set(input().split())
-n = input()
-french = set(input().split())
-print(len(english.difference(french)))
