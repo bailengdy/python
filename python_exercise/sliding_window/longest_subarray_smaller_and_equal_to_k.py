@@ -1,3 +1,5 @@
+# Sliding Window
+# Two Pointers
 def f(nums, k):
     l = s = 0
     res = 0
