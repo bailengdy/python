@@ -35,3 +35,8 @@ def max_sliding_window_optimised(self, nums: List[int], k: int) -> List[int]:
         res.append(nums[dq[0]])
 
     return res
+
+
+print(max_sliding_window([1,2,3,4], 3)) #[3, 4]
+print(max_sliding_window([1], 1)) #[1]
+print(max_sliding_window([1, -1], 1)) #[1, -1]

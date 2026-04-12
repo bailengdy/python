@@ -23,22 +23,31 @@ class MedianFinder:
 class MedianFinderOptimised:
 
     def __init__(self):
-        self.minheap = []
-        self.maxheap = []
+        self.first = []
+        self.second = []
 
-    def add_num(self, num: int) -> None:
-        if len(self.minheap) == len(self.maxheap):
-            heapq.heappush(self.maxheap, -(heapq.heappushpop(self.minheap, num)))
+    def add_num(self, val: int) -> None:
+        if len(self.first) == len(self.second):
+            heapq.heappush(self.first, -heapq.heappushpop(self.second, val))
         else:
-            heapq.heappush(self.minheap, -(heapq.heappushpop(self.maxheap, -num)))
+            heapq.heappush(self.second, -heapq.heappushpop(self.first, -val))
 
     def find_median(self) -> float:
-        if len(self.minheap) == len(self.maxheap):
-            return float((self.minheap[0] - self.maxheap[0]) / 2)
-        else:
-            return float(-self.maxheap[0])
+        if len(self.first) > len(self.second):
+            return -self.first[0]
+        return (-self.first[0] + self.second[0]) / 2
 
 # Your MedianFinder object will be instantiated and called as such:
 # obj = MedianFinder()
 # obj.addNum(num)
 # param_2 = obj.findMedian()
+
+mf = MedianFinder()
+mf.add_num(1)
+print(mf.find_median())
+mf.add_num(9)
+print(mf.find_median())
+mf.add_num(7)
+# print(mf.first)
+# print(mf.second)
+print(mf.find_median())

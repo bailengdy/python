@@ -1,11 +1,16 @@
 # Sliding Window
 # Prefix Sum + HashMap(Count)
-def subarray_sum(self, nums: List[int], k: int) -> int:
+def subarray_sum(nums, k: int) -> int:
     indices = {0: 1}
-    pSum = res = 0
+    p_sum = res = 0
     for i, num in enumerate(nums):
-        pSum += num
-        if pSum - k in indices:
-            res += indices[pSum - k]
-        indices[pSum] = indices.get(pSum, 0) + 1
+        p_sum += num
+        if p_sum - k in indices:
+            res += indices[p_sum - k]
+        indices[p_sum] = indices.get(p_sum, 0) + 1
     return res
+
+
+print(subarray_sum([1,1,1,1], 2)) #3
+print(subarray_sum([1,-1,1,-1], 0)) #4
+print(subarray_sum([], 0)) #0
