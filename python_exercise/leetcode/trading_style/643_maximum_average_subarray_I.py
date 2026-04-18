@@ -14,3 +14,5 @@ def find_max_average(nums, k: int) -> float:
 # We maintain a running sum over the window.
 # When the window moves, we update the sum in O(1)
 # by adding the new element and removing the old one.
+
+print(find_max_average([1,2,3,4,5], 3))

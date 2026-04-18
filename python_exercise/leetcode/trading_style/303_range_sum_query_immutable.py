@@ -13,3 +13,8 @@ class NumArray:
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)
 # param_1 = obj.sumRange(left,right)
+
+
+na = NumArray([1,2,3,4,5,6])
+print(na.sum_range(0, 3)) #10
+print(na.sum_range(1, 5)) #20

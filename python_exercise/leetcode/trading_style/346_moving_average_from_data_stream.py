@@ -20,3 +20,10 @@ class MovingAverage:
 # Your MovingAverage object will be instantiated and called as such:
 # obj = MovingAverage(size)
 # param_1 = obj.next(val)
+
+ma = MovingAverage(2)
+print(ma.next(1))
+print(ma.next(2))
+print(ma.next(3))
+print(ma.next(4))
+print(ma.next(5))
