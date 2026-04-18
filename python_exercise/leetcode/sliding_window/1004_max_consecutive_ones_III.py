@@ -11,3 +11,7 @@ def longest_ones(nums, k: int) -> int:
             l += 1
         res = max(res, r - l + 1)
     return res
+
+
+print(longest_ones([1,1,1,0,0,1,1], 2)) #7
+print(longest_ones([1,1,1,0,0,1,1], 1)) #4

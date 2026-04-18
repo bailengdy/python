@@ -24,3 +24,7 @@ def num_of_subarrays_optimised(arr, k: int, threshold: int) -> int:
         if s >= target_sum:
             res += 1
     return res
+
+
+print(num_of_subarrays_optimised([1,1,1,1,9,1,1,1], 4, 1)) #4
+print(num_of_subarrays_optimiseds([1,1,1,1,9,1,1,1], 1, 1)) #1
