@@ -25,3 +25,9 @@ def image_smoother(self, img):
             res[i][j] = total // count
 
     return res
+
+
+# [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+print(image_smoother([[1,1,1],[1,0,1],[1,1,1]]))
+# [[137, 141, 137], [141, 138, 141], [137, 141, 137]]
+print(image_smoother([[100,200,100],[200,50,200],[100,200,100]]))
